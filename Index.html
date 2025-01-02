@@ -7,17 +7,111 @@
     <title>Personal Portfolio Website - Kevin Truong</title>
 </head>
 <body>
-    <div id="header">
-        <div id="container">
-            <nav>
-                <img src=".//src/Logo.png" alt="logo">
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src=".//src/Logo.png" class="logo">
+            <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact</a></li>
-            </nav>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Aspiring Developer</p>
+            <h1>Hey, I'm <span>Kevin Truong</span> <br>from Canada, ON</h1>
         </div>
     </div>
+</div>
+
+<!-- About Section -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="src/Me.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>
+                    Hi! My name is Kevin and I'm an aspiring developer with a high interest in web development, 
+                    AI and machine learning and Cybersecurity. I'm currently in my 2nd year of studying Computer 
+                    Science at Carleton University. As of now I'm exploring my options and learning web
+                    development on the side for both fun and to strengthen my tech stack. I look to consistently
+                    update and add to this web portfolio as I grow as a developer, learn new things and make more
+                    projects!
+                </p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <!-- Skills -->
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing aesthetic user-friendly web app interfaces</li>
+                        <li><span>Web Development</span><br>Developing intuitive web applications</li>
+                        <li><span>Software Development</span><br>Creating applications that can help users with certain tasks</li>
+                    </ul>
+                </div>
+
+                <!-- Experience -->
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Oct. 2024 - Present</span><br>Currently working on a job application tracker web application in a team of five that implements the MERN stack</li>
+                        <li><span>Oct. 2024</span><br>Participated in a Hackathon lead by the Carleton Computer Science Society (CCSS) where I worked with 
+                            with two others to revamp the Carleton web portal; Carleton Central through various front-end, back-end and even security related
+                        coding challenges</li>
+                        <li><span>May 2024 - Present</span><br>Designing and developing a website for a local Vietnamese desserts business using HTML, CSS and JavaScript</li>
+                    </ul>
+                </div>
+
+                <!-- Education -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Sep. 2023 - Present</span><br>B.C.S. Honours Computer Science, Co-op @ Carleton University, 2nd Year Standing</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+ <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+
+        // Hide the current link
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        } // end of 
+        
+        // Hide the current tab
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        } // end of for
+
+        // Set the new active link
+        event.currentTarget.classList.add("active-link");
+
+        // Display the contents
+        document.getElementById(tabname).classList.add("active-tab");
+
+
+    } // end of opentab function
+
+ </script>
+
+
 </body>
 </html>
