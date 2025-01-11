@@ -5,9 +5,44 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     background: #080808;
     color: white;
+}
+
+.light-mode {
+
+    background: rgb(255, 250, 236);
+    color: black;
+
+    .subtitle {
+        color: black;
+    }
+
+    .skills-list div {
+        background-color: #f3eddc;
+        border: 2px solid black;
+    }
+
+    .layer {
+        color: white;
+    }
+
+    transition: 0.5s ease-in-out;
+
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1; /* appears above everything else as you scroll */
+    padding: 10px 10%;
+    background-color: #252323;
+    mix-blend-mode: difference;
 }
 
 #header {
@@ -58,6 +93,24 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+/* LIGHT/DARK MODE BUTTON */
+
+#mode-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 20px;
+}
+
+#mode-switch img {
+    height: 5vh;
+}
+
 .header-text {
     margin-top: 20%;
     font-size: 30px;
@@ -76,7 +129,7 @@ nav ul li a:hover::after {
 
 #about {
     padding: 80px 0;
-    color: #ababab;
+    scroll-margin-top: 100px;
 }
 
 .row {
@@ -154,6 +207,7 @@ nav ul li a:hover::after {
 /* Projects Section */
 #projects {
     padding: 50px 0;
+    scroll-margin-top: 120px;
 }
 
 .project-list {
@@ -210,6 +264,7 @@ nav ul li a:hover::after {
 /* Skills Section */
 #skills {
     padding: 30px 0;
+    scroll-margin-top: 120px;
 }
 
 .skills-list {
