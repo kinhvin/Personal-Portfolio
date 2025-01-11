@@ -14,26 +14,48 @@ body {
     color: white;
 }
 
-.light-mode {
+/* Change these  */
 
-    background: rgb(255, 250, 236);
-    color: black;
+:root {
+    --base-color: white;
+    --base-variant: white;
+    --text-color: black;
+    --secondary-text: black;
+    --primary-color: black;
+    --accent-color: blue;
+}
 
-    .subtitle {
-        color: black;
-    }
+.darkmode {
+    --base-color: white;
+    --base-variant: white;
+    --text-color: black;
+    --secondary-text: black;
+    --primary-color: black;
+    --accent-color: blue;
+}
 
-    .skills-list div {
-        background-color: #f3eddc;
-        border: 2px solid black;
-    }
+/* LIGHT/DARK MODE BUTTON */
 
-    .layer {
-        color: white;
-    }
+#mode-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
 
-    transition: 0.5s ease-in-out;
+#mode-switch img {
+    height: 5vh;
+}
 
+#mode-switch img:last-child {
+    display: none;
 }
 
 #navbar {
@@ -93,24 +115,6 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* LIGHT/DARK MODE BUTTON */
-
-#mode-switch {
-    height: 50px;
-    width: 50px;
-    padding: 0;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 20px;
-    right: 20px;
-}
-
-#mode-switch img {
-    height: 5vh;
-}
-
 .header-text {
     margin-top: 20%;
     font-size: 30px;
@@ -123,6 +127,11 @@ nav ul li a:hover::after {
 
 .header-text h1 span {
     color: #82d6f1;
+}
+
+.cv {
+    border-radius: 50%;
+
 }
 
 /* About Section */
