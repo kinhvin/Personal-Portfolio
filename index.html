@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="styles.css">
     <title>Personal Portfolio Website - Kevin Truong</title>
     <script src="https://kit.fontawesome.com/c3fe759890.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="mode.js" defer></script>
 </head>
 <body>
 
 <div id="navbar">
 
     <a href="#">
-        <img src=".//src/White-Text-Logo.png" class="logo">
+        <img src=".//src/Black-Text-Logo.png" id="logo" data-alt=".//src/White-Text-Logo.png">
     </a>
 
     <nav>
@@ -40,9 +41,9 @@
         <div class="header-text">
             <p>Aspiring Developer</p>
             <h1>Hey, I'm <span>Kevin Truong</span></h1>
-            <button class="cv">
-                Download CV
-            </button>
+            <a href="src/Kevin_Truong_Resume_W25.pdf" download="Kevin_Truong_CV">
+                <button class="cv">Download CV</button>
+            </a>
         </div>
 
     </div>
@@ -67,9 +68,9 @@
                 </p>
                 
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills-tab')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience-tab')">Experience</p>
+                    <p class="tab-links active-link" onclick="opentab('experience-tab')">Experience</p>
                     <p class="tab-links" onclick="opentab('education-tab')">Education</p>
+                    <!-- <p class="tab-links" onclick="opentab('skills-tab')">Hobbies</p> -->
                 </div>
 
                 <!-- Skills -->
@@ -88,7 +89,7 @@
                         <li><span>Oct. 18 - Oct. 19, 2024</span><br>Participated in a Hackathon lead by the Carleton Computer Science Society (CCSS) where I worked with 
                             with two others to revamp the Carleton web portal; Carleton Central through various front-end, back-end and even security related
                         coding challenges</li>
-                        <li><span>May 2024 - Present</span><br>Designing and developing a website for a local Vietnamese desserts business using HTML, CSS and JavaScript</li>
+                        <li><span>July 2024 - Present</span><br>Designing and developing a website for a local Vietnamese desserts business using HTML, CSS and JavaScript</li>
                     </ul>
                 </div>
 
@@ -244,12 +245,36 @@
 
 <!-- Footer Section -->
 <div id="footer">
-    <!-- <p>© Copyright 2025 Kevin Truong. All rights reserved.</p> -->
-     <p>This is the footer.</p>
+    <p>© Copyright 2025 Kevin Truong. All rights reserved.</p>
+     <!-- <p>This is the footer.</p> -->
 </div>
 
-<!-- JavaScript -->
- <script src="script.js"></script>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+
+        // Hide the current link
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        } // end of 
+        
+        // Hide the current tab
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        } // end of for
+
+        // Set the new active link
+        event.currentTarget.classList.add("active-link");
+
+        // Display the contents
+        document.getElementById(tabname).classList.add("active-tab");
+
+    } // end of opentab function
+
+</script>
 
 </body>
 </html>
