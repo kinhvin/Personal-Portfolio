@@ -10,7 +10,7 @@ function changeLogo() {
 }
 
 const enableDarkmode = () => {
-    document.body.classList.add('darkmode');
+    document.body.classList.add('darkmode')
     localStorage.setItem('darkmode', 'active')
     changeLogo()
 }

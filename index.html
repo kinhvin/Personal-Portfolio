@@ -8,12 +8,12 @@
     <script src="https://kit.fontawesome.com/c3fe759890.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="mode.js" defer></script>
 </head>
-<body>
+<body class="darkmode">
 
 <div id="navbar">
 
     <a href="#">
-        <img src=".//src/Black-Text-Logo.png" id="logo" data-alt=".//src/White-Text-Logo.png">
+        <img src=".//src/Black-Text-Logo.png" id="logo" data-alt=".//src/White-Text-Logo.png" alt="myLogo">
     </a>
 
     <nav>
@@ -29,8 +29,8 @@
     </nav>
 
     <button id="mode-switch">
-        <img src="src/light-mode.png">
-        <img src="src/dark-mode.png">
+        <img src="src/light-mode.png" alt="lightModeSun">
+        <img src="src/dark-mode.png" alt="darkModeMoon">
     </button>
 
 </div>
@@ -41,8 +41,8 @@
         <div class="header-text">
             <p>Aspiring Developer</p>
             <h1>Hey, I'm <span>Kevin Truong</span></h1>
-            <a href="src/Kevin_Truong_Resume_W25.pdf" download="Kevin_Truong_CV">
-                <button class="cv">Download CV</button>
+            <a href="src/Kevin_Truong_Resume_W25.pdf" download="Kevin_Truong_Resume">
+                <button class="resume">Resume</button>
             </a>
         </div>
 
@@ -54,7 +54,7 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="src/Me.jpg">
+                <img src="src/Me.jpg" alt="gradPhoto">
             </div>
             <div class="about-col-2">
                 <h1 class="subtitle">About Me</h1>
@@ -111,7 +111,7 @@
         <h1 class="sub-title">My Projects</h1>
         <div class="project-list">
             <div class="project">
-                <img src="src/To-Do-List.png">
+                <img src="src/To-Do-List.png" alt="toDoListProject">
                 <div class="layer">
                     <h3>To-Do List</h3>
                     <p>This To-Do list features auto-saving of tasks and a simple, aesthetic visual layout.</p>
@@ -119,7 +119,7 @@
             </div>
 
             <div class="project">
-                <img src="src/Five-Nights-At-Kermz.png">
+                <img src="src/Five-Nights-At-Kermz.png" alt="fnakProject">
                 <div class="layer">
                     <h3>Five Nights at Kermz Game</h3>
                     <p>This is a game I pair-programmed in Java for my final summative project in grade 12. 
@@ -129,7 +129,7 @@
             </div>
 
             <div class="project">
-                <img src="src/BlackLineFollower.png">
+                <img src="src/BlackLineFollower.png" alt="blackLineFollowerProject">
                 <div class="layer">
                     <h3>Black-Line Following Robot</h3>
                     <p>A black-line following robot that I programmed using a PIC microcontroller with MPLABX, which uses C as its programming language. 
@@ -138,7 +138,7 @@
             </div>
 
             <div class="project">
-                <img src="src/TrafficLightSim.png">
+                <img src="src/TrafficLightSim.png" alt="trafficSystemProject">
                 <div class="layer">
                     <h3>Traffic Light Simulator</h3>
                     <p>A traffic light simulator I created all the way in grade 11 (2021 - 2022) for my computer engineering class. It features the standard traffic light sequences, pedestrian signals and even railway crossing signals. 
@@ -158,27 +158,63 @@
         <div class="skills-list">
 
             <!-- Skill 1 -->
-            <div>
-                <i class="fa-solid fa-code"></i>
+            <div class="skill-boxes">
+                <i class="fa-solid fa-code" id="box-icon"></i>
                 <h2>Software Development</h2>
                 <p>I am able to design and create software that can satisfy specific user needs.</p>
             </div>
 
             <!-- Skill 2 -->
-            <div>
-                <i class="fa-solid fa-cloud"></i>
+            <div class="skill-boxes">
+                <i class="fa-solid fa-cloud" id="box-icon"></i>
                 <h2>Web Development</h2>
                 <p>I have the ability to develop intuitive, user-friendly web applications for different purposes.</p>
             </div>
 
-            <div>
+            <div class="skill-boxes">
+                <i class="fa-solid fa-cubes" id="box-icon"></i>
                 <h2>Languages & Frameworks</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quis modi cum. Atque aliquid quasi beatae eos, 
-                    qui ut impedit, optio facere amet vitae mollitia non sed corrupti, a sapiente.</p>
+
+                <div class="langs-list">
+
+                    <div class="lang">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                            <path fill="#F44336" d="M23.65,24.898c-0.998-1.609-1.722-2.943-2.725-5.455C19.229,15.2,31.24,11.366,26.37,3.999c2.111,5.089-7.577,8.235-8.477,12.473C17.07,20.37,23.645,24.898,23.65,24.898z"></path><path fill="#F44336" d="M23.878,17.27c-0.192,2.516,2.229,3.857,2.299,5.695c0.056,1.496-1.447,2.743-1.447,2.743s2.728-0.536,3.579-2.818c0.945-2.534-1.834-4.269-1.548-6.298c0.267-1.938,6.031-5.543,6.031-5.543S24.311,11.611,23.878,17.27z"></path><g><path fill="#1565C0" d="M32.084 25.055c1.754-.394 3.233.723 3.233 2.01 0 2.901-4.021 5.643-4.021 5.643s6.225-.742 6.225-5.505C37.521 24.053 34.464 23.266 32.084 25.055zM29.129 27.395c0 0 1.941-1.383 2.458-1.902-4.763 1.011-15.638 1.147-15.638.269 0-.809 3.507-1.638 3.507-1.638s-7.773-.112-7.773 2.181C11.683 28.695 21.858 28.866 29.129 27.395z"></path><path fill="#1565C0" d="M27.935,29.571c-4.509,1.499-12.814,1.02-10.354-0.993c-1.198,0-2.974,0.963-2.974,1.889c0,1.857,8.982,3.291,15.63,0.572L27.935,29.571z"></path><path fill="#1565C0" d="M18.686,32.739c-1.636,0-2.695,1.054-2.695,1.822c0,2.391,9.76,2.632,13.627,0.205l-2.458-1.632C24.271,34.404,17.014,34.579,18.686,32.739z"></path><path fill="#1565C0" d="M36.281,36.632c0-0.936-1.055-1.377-1.433-1.588c2.228,5.373-22.317,4.956-22.317,1.784c0-0.721,1.807-1.427,3.477-1.093l-1.42-0.839C11.26,34.374,9,35.837,9,37.017C9,42.52,36.281,42.255,36.281,36.632z"></path><path fill="#1565C0" d="M39,38.604c-4.146,4.095-14.659,5.587-25.231,3.057C24.341,46.164,38.95,43.628,39,38.604z"></path></g>
+                            </svg>
+                        <span class="lang-name">Java</span>
+                        <span class="lang-lvl"></span>
+                    </div>
+
+
+                    <div class="lang">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                            <path fill="#0277BD" d="M24.047,5c-1.555,0.005-2.633,0.142-3.936,0.367c-3.848,0.67-4.549,2.077-4.549,4.67V14h9v2H15.22h-4.35c-2.636,0-4.943,1.242-5.674,4.219c-0.826,3.417-0.863,5.557,0,9.125C5.851,32.005,7.294,34,9.931,34h3.632v-5.104c0-2.966,2.686-5.896,5.764-5.896h7.236c2.523,0,5-1.862,5-4.377v-8.586c0-2.439-1.759-4.263-4.218-4.672C27.406,5.359,25.589,4.994,24.047,5z M19.063,9c0.821,0,1.5,0.677,1.5,1.502c0,0.833-0.679,1.498-1.5,1.498c-0.837,0-1.5-0.664-1.5-1.498C17.563,9.68,18.226,9,19.063,9z"></path><path fill="#FFC107" d="M23.078,43c1.555-0.005,2.633-0.142,3.936-0.367c3.848-0.67,4.549-2.077,4.549-4.67V34h-9v-2h9.343h4.35c2.636,0,4.943-1.242,5.674-4.219c0.826-3.417,0.863-5.557,0-9.125C41.274,15.995,39.831,14,37.194,14h-3.632v5.104c0,2.966-2.686,5.896-5.764,5.896h-7.236c-2.523,0-5,1.862-5,4.377v8.586c0,2.439,1.759,4.263,4.218,4.672C19.719,42.641,21.536,43.006,23.078,43z M28.063,39c-0.821,0-1.5-0.677-1.5-1.502c0-0.833,0.679-1.498,1.5-1.498c0.837,0,1.5,0.664,1.5,1.498C29.563,38.32,28.899,39,28.063,39z"></path>
+                            </svg>
+                        <span class="lang-name">Python</span>
+                        <span class="lang-lvl"></span>
+                    </div>
+
+                    
+                    <div class="lang">
+                        <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100" height="100" viewBox="0 0 109.19 122.88" style="enable-background:new 0 0 109.19 122.88" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#3949AB;} .st1{fill-rule:evenodd;clip-rule:evenodd;fill:#283593;} .st2{fill-rule:evenodd;clip-rule:evenodd;fill:#5C6BC0;} .st3{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}</style><g><path class="st0" d="M107.81,92.16c0.86-1.48,1.39-3.16,1.39-4.66V35.38c0-1.5-0.53-3.17-1.39-4.66L54.6,61.44L107.81,92.16 L107.81,92.16L107.81,92.16z"/><path class="st1" d="M59.33,121.75l45.14-26.06c1.3-0.75,2.48-2.05,3.34-3.53L54.6,61.44L1.39,92.16c0.86,1.48,2.04,2.78,3.34,3.53 l45.14,26.06C52.47,123.25,56.72,123.25,59.33,121.75L59.33,121.75L59.33,121.75z"/><path class="st2" d="M107.81,30.72c-0.86-1.48-2.04-2.78-3.34-3.53L59.33,1.13c-2.6-1.5-6.86-1.5-9.46,0L4.73,27.19 C2.13,28.69,0,32.38,0,35.38V87.5c0,1.5,0.53,3.17,1.39,4.66L54.6,61.44L107.81,30.72L107.81,30.72L107.81,30.72z"/><path class="st3" d="M54.6,97.84c-20.07,0-36.4-16.33-36.4-36.4s16.33-36.4,36.4-36.4c12.95,0,25.03,6.97,31.52,18.19l-15.75,9.12 c-3.25-5.62-9.29-9.1-15.77-9.1c-10.04,0-18.2,8.16-18.2,18.2c0,10.03,8.16,18.2,18.2,18.2c6.48,0,12.52-3.49,15.77-9.1l15.75,9.12 C79.63,90.87,67.55,97.84,54.6,97.84L54.6,97.84L54.6,97.84z"/></g></svg>
+                        <span class="lang-name">C</span>
+                        <span class="lang-lvl"></span>
+                    </div>
+
+                    
+                    <div class="lang">
+                        <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 109.19 122.88" style="enable-background:new 0 0 109.19 122.88" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#00599C;} .st1{fill-rule:evenodd;clip-rule:evenodd;fill:#004482;} .st2{fill-rule:evenodd;clip-rule:evenodd;fill:#659AD2;} .st3{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}</style><g><path class="st0" d="M107.81,92.16c0.86-1.48,1.39-3.16,1.39-4.66V35.38c0-1.5-0.53-3.17-1.39-4.66L54.6,61.44L107.81,92.16 L107.81,92.16z"/><path class="st1" d="M59.33,121.75l45.14-26.06c1.3-0.75,2.48-2.05,3.34-3.53L54.6,61.44L1.39,92.16c0.86,1.48,2.04,2.78,3.34,3.53 l45.14,26.06C52.47,123.26,56.73,123.26,59.33,121.75L59.33,121.75z"/><path class="st2" d="M107.81,30.72c-0.86-1.48-2.04-2.78-3.34-3.53L59.33,1.13c-2.6-1.5-6.86-1.5-9.46,0L4.73,27.19 C2.13,28.69,0,32.37,0,35.38V87.5c0,1.5,0.53,3.17,1.39,4.66L54.6,61.44L107.81,30.72L107.81,30.72z"/><path class="st3" d="M54.6,97.84c-20.07,0-36.4-16.33-36.4-36.4c0-20.07,16.33-36.4,36.4-36.4c12.95,0,25.03,6.97,31.52,18.19 l-15.75,9.12c-3.25-5.62-9.29-9.1-15.77-9.1c-10.04,0-18.2,8.16-18.2,18.2c0,10.03,8.16,18.2,18.2,18.2 c6.48,0,12.52-3.49,15.77-9.1l15.75,9.12C79.63,90.87,67.55,97.84,54.6,97.84L54.6,97.84z"/><polygon class="st3" points="91,59.42 86.95,59.42 86.95,55.37 82.91,55.37 82.91,59.42 78.86,59.42 78.86,63.46 82.91,63.46 82.91,67.51 86.95,67.51 86.95,63.46 91,63.46 91,59.42"/><polygon class="st3" points="106.16,59.42 102.12,59.42 102.12,55.37 98.07,55.37 98.07,59.42 94.03,59.42 94.03,63.46 98.07,63.46 98.07,67.51 102.12,67.51 102.12,63.46 106.16,63.46 106.16,59.42"/></g></svg>
+                        <span class="lang-name">C++</span>
+                        <span class="lang-lvl"></span>
+                    </div>
+
+                </div>
+
             </div>
 
-            <div>
-                <h2>Soft & Hard Skills</h2>
+            <div class="skill-boxes">
+                <i class="fa-solid fa-laptop-code" id="box-icon"></i>
+                <h2>Developer Tools</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic labore culpa vero dolorum tempore qui ut enim officiis perspiciatis voluptate a reprehenderit, 
                     voluptatibus provident expedita molestias cumque, consequuntur similique ab?</p>
             </div>

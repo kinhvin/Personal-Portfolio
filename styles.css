@@ -21,18 +21,20 @@ body {
     --base-color: #F5EDED;
     --base-variant: #E2DAD6;
     --text-color: black;
-    --secondary-text: #d2d3db;
+    --secondary-text: #dd9612;
     --secondary-color: #C4D9FF;
-    --accent-color: #6482AD;
+    --accent-color: #fdfff2;
+    --mode-img-size: 5vh;
 }
 
 .darkmode {
-    --base-color: #272626;
-    --base-variant: rgb(46, 44, 51);
-    --text-color: rgb(255, 255, 255);
-    --secondary-text: rgb(183, 183, 183);
-    --secondary-color: black;
-    --accent-color: #17153B;
+    --base-color: #222831;
+    --base-variant: #31363F;
+    --text-color: #EEEEEE;
+    --secondary-text: #03bfc9;
+    --secondary-color: #31363F;
+    --accent-color: #737777;
+    --mode-img-size: 4vh;
 }
 
 /* LIGHT/DARK MODE BUTTON */
@@ -43,7 +45,7 @@ body {
     width: 50px;
     padding: 0;
     border-radius: 50%;
-    background-color: var(--base-color);
+    background-color: var(--base-variant);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,10 +54,18 @@ body {
     margin-top: 20px;
     margin-right: 20px;
     transition: background-color 0.5s ease-in-out;
+    border: none;
+}
+
+#mode-switch:hover {
+    opacity: 80%;
+    box-shadow: -3px 5px 5px #222831;
+    transition: opacity 0.3s ease-in-out,
+                box-shadow 0.3s ease-in-out;
 }
 
 #mode-switch img {
-    height: 4vh;
+    height: var(--mode-img-size);
 }
 
 #mode-switch img:last-child {
@@ -118,7 +128,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #82d6f1;
+    background: var(--accent-color);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -140,18 +150,24 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-    color: #82d6f1;
+    color: var(--secondary-text);
 }
 
-.cv {
-    border-radius: 10px;
+.resume {
+    border-radius: 20px;
     cursor: pointer;
     text-align: center;
     margin-top: 20px;
     padding: 10px;
-    background-color: #313131;
-    color: white;
+    background-color: var(--base-variant);
+    color: var(--text-color);
     font-weight: 600;
+    height: 4vh;
+    border: none;
+}
+
+.resume:hover {
+    opacity: 80%;
 }
 
 /* About Section */
@@ -220,7 +236,7 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-    color: #40a6c8;
+    color: var(--secondary-text);
     font-size: 14px;
 }
 
@@ -303,7 +319,7 @@ nav ul li a:hover::after {
     margin-top: 50px;
 }
 
-.skills-list div {
+.skills-list .skill-boxes {
     background: var(--accent-color);
     padding: 37px;
     font-size: 13px;
@@ -313,21 +329,45 @@ nav ul li a:hover::after {
     border: 1px solid black;
 }
 
-.skills-list div i {
+#box-icon {
     font-size: 50px;
     margin-bottom: 30px;
 }
 
-.skills-list div h2 {
+.skills-list .skill-boxes h2 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 
-.skills-list div:hover {
+.skills-list .skill-boxes:hover {
     background: #3fb7e0;
     transform: translateY(-10px);
 }
+
+.langs-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+}
+
+.langs-list .lang {
+    display: flex;
+}
+
+.langs-list .lang svg {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.langs-list .lang span {
+    font-size: 20px;
+    line-height: 50px;
+}
+
 
 /* Contact Section */
 .contact-left {
