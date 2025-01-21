@@ -15,13 +15,13 @@ body {
     transition: 0.5s ease-in-out;
 }
 
-/* Change these  */
+/* Light/Dark mode color palettes */
 
 :root {
     --main-color: #F5EDED;
     --secondary-color: #E2DAD6;
-    --accent-color: #77b6f5;
-    --secondary-accent: #076eff;
+    --accent-color: #fd8700;
+    --secondary-accent: #008cff;
     --text-color: black;
     --secondary-text: rgb(90, 90, 90);
     --mode-img-size: 5vh;
@@ -151,7 +151,7 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-    color: var(--text-color);
+    color: var(--accent-color);
 }
 
 .home-btns {
@@ -166,8 +166,8 @@ nav ul li a:hover::after {
 }
 
 .resume-btn {
-    display: block;
-    margin-top: 7px;
+    display: flex;
+    margin-top: 4px;
     margin-right: 5px;
     border-radius: 50px;
     font-size: 18px;
@@ -179,6 +179,7 @@ nav ul li a:hover::after {
     color: var(--text-color);
     font-weight: 600;
     border: none;
+    align-items: center;
     transition: all 0.3s ease-in-out;
 }
 
@@ -186,6 +187,12 @@ nav ul li a:hover::after {
     transform: scale(1.05);
     opacity: 80%;
     transition: all 0.3s ease-in-out;
+}
+
+.resume-btn svg {
+    fill: var(--text-color);
+    margin-right: 3px;
+    margin-left: -6px;
 }
 
 .home-links {
@@ -204,7 +211,7 @@ nav ul li a:hover::after {
 }
 
 .home-links:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     opacity: 80%;
     transition: all 0.3s ease-in-out;
 }
@@ -253,7 +260,7 @@ nav ul li a:hover::after {
 .tab-links {
     margin-right: 50px;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     position: relative;
 }
@@ -267,7 +274,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: var(--accent-color);
+    background: var(--secondary-accent);
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -285,8 +292,9 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-    color: var(--accent-color);
+    color: var(--secondary-accent);
     font-size: 20px;
+    font-weight: 600;
 }
 
 /* make tab contents invisble by default */
@@ -304,60 +312,134 @@ nav ul li a:hover::after {
     scroll-margin-top: 120px;
 }
 
-.project-list {
+.projects-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-gap: 50px;
-    margin-top: 50px;
+    grid-gap: 40px;
 }
 
 .project {
     display: flex;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
 .project img {
     width: 100%;
-    border-radius: 10px;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
     display: block;
-    transition: transform 0.5s;
+    margin: auto;
 }
 
-.layer {
+.wrapper {
+    height: 100%;
     width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), var(--accent-color));
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-img {
+    position: relative;
+}
+
+.project-desc {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-}
-
-.layer h3 {
-    font-weight: 500;
-    margin-bottom: 20px;
     color: white;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 30px;
+    padding: 20px;
 }
 
-.layer p {
-    color: white;
+.project-desc h1 {
+    margin-bottom: 10px;
 }
 
-.project:hover img {
-    transform: scale(1.1);
+.project-desc:hover {
+    opacity: 1;
 }
 
-.project:hover .layer {
+.project-btns {
+    margin-top: 15px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.project-btns button {
+    padding: 1em;
+    height: 5vh;
+    width: 10vh;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+/* use the @property rule to create a custom angle property */
+@property --angle {
+    syntax: "<angle>";
+
+    /* default value */
+    initial-value: 0deg;
+
+    /* default setting for custom property */
+    inherits: false;
+}
+
+.project .project-btns button::after,  .project .project-btns button::before{
+
+    /* create a pseudo-button behind each button */
+    content: '';
+    position: absolute;
     height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), var(--accent-color), var(--secondary-accent), var(--accent-color));
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    animation: 3s spin linear infinite;
+
+    /* copy over the buttons css styling */
+    padding: 3px;
+    border-radius: 50px;
+}
+
+/* spinning animation to perform a full rotation */
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+.project .project-btns button::before {
+    filter: blur(1.5rem);
+    opacity: 0.3;
+}
+
+.project .project-btns button:hover {
+    transform: scale(1.1);
 }
 
 /* Skills Section */
@@ -425,6 +507,10 @@ nav ul li a:hover::after {
 
 
 /* Contact Section */
+#contact {
+    margin-top: 50px;
+}
+
 .contact-left {
     flex-basis: 35%;
 }

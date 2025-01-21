@@ -47,7 +47,9 @@
 
         <div class="home-btns">
             <a href="src/Kevin_Truong_Resume_W25.pdf" download="Kevin_Truong_Resume" class="resume-file">
-                <button class="resume-btn">Resume</button>
+                <button class="resume-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 -960 960 960"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58zM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160z"/></svg>
+                    Resume</button>
             </a>
 
 
@@ -116,40 +118,105 @@
 <div id="projects">
     <div class="container">
         <h1 class="sub-title">My Projects</h1>
-        <div class="project-list">
+
+        <div class="projects-list">
+
             <div class="project">
-                <img src="src/To-Do-List.png" alt="toDoListProject">
-                <div class="layer">
-                    <h3>To-Do List</h3>
-                    <p>This To-Do list features auto-saving of tasks and a simple, aesthetic visual layout.</p>
+                <div class="wrapper">
+                    <div class="project-img">   
+                        <img src="src/To-Do-List.png" alt="toDoListProject" loading="lazy">
+                        <div class="project-desc">
+                            <h1>To-Do List</h1>
+                            <p>
+                                A simple and intuitive web application that is designed to help users keep track of and manage
+                                their daily tasks effectively in one place. Featuring a simple, but beatiful UI and autosaving of
+                                tasks through the use of local storage.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-btns">
+
+                    <a href="https://github.com/kinhvin/To-Do-List" target="_blank">
+                        <button>GitHub</button>
+                    </a>
+
+                    <a href="https://kinhvin.github.io/To-Do-List/" target="_blank">
+                        <button>Demo</button>
+                    </a>
                 </div>
             </div>
 
             <div class="project">
-                <img src="src/Five-Nights-At-Kermz.png" alt="fnakProject">
-                <div class="layer">
-                    <h3>Five Nights at Kermz Game</h3>
-                    <p>This is a game I pair-programmed in Java for my final summative project in grade 12. 
-                        It is a clone of the famous game "Five Nights at Freddy" (FNAF), except with a few of our own touches and coded from scratch using the
-                    Model-View-Controller (MVC) framework.</p>
+
+                <div class="wrapper">
+                    <div class="project-img">
+                        <img src="src/Five-Nights-At-Kermz.png" alt="fnakProject" loading="lazy">
+
+                        <div class="project-desc">
+                            <h1>Five Nights at Kermz</h1>
+                            <p>
+                                This is a game I pair-programmed in Java for my final summative project in grade 12. 
+                                It is a clone of the famous game "Five Nights at Freddy" (FNAF), except with a few of 
+                                our own touches and coded from scratch using the Model-View-Controller (MVC) framework.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-btns">
+                    <a href="https://github.com/kinhvin/Five-Nights-at-Kermz-2019" target="_blank">
+                        <button>GitHub</button>
+                    </a>
                 </div>
             </div>
 
             <div class="project">
-                <img src="src/BlackLineFollower.png" alt="blackLineFollowerProject">
-                <div class="layer">
-                    <h3>Black-Line Following Robot</h3>
-                    <p>A black-line following robot that I programmed using a PIC microcontroller with MPLABX, which uses C as its programming language. 
-                        This was built completely from scratch and was created for my grade 12 computer engineering class (2022 - 2023).</p>
+                <div class="wrapper">
+                    <div class="project-img">
+                        <img src="src/BlackLineFollower.png" alt="blackLineFollowerProject" loading="lazy">
+
+                        <div class="project-desc">
+                            <h1>Black Line Following Robot</h1>
+                            <p>
+                                A black-line following robot that I programmed using a PIC microcontroller with MPLABX, which uses C as its programming language. 
+                                This was built completely from scratch and was created for my grade 12 computer engineering class (2022 - 2023).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-btns">
+                    <a href="https://github.com/kinhvin/BlackLineFollowingRobot" target="_blank">
+                        <button>GitHub</button>
+                    </a>
+                    <a href="https://youtu.be/Dbx3mekzsog?si=hlzyT5GfR4DlFRPi" target="_blank">
+                        <button>Demo</button>
+                    </a>
                 </div>
             </div>
 
             <div class="project">
-                <img src="src/TrafficLightSim.png" alt="trafficSystemProject">
-                <div class="layer">
-                    <h3>Traffic Light Simulator</h3>
-                    <p>A traffic light simulator I created all the way in grade 11 (2021 - 2022) for my computer engineering class. It features the standard traffic light sequences, pedestrian signals and even railway crossing signals. 
-                        It was programmed using a PIC microcontroller with MPLABX which utilizes C as its programming language.</p>
+
+                <div class="wrapper">
+                    <div class="project-img">
+                        <img src="src/TrafficLightSim.png" alt="trafficSystemProject" loading="lazy">
+                        <div class="project-desc">
+                            <h1>Breadboard Traffic Light Simulator</h1>
+                            <p>
+                                A traffic light simulator I created all the way in grade 11 (2021 - 2022) for my computer engineering class. 
+                                It features the standard traffic light sequences, pedestrian signals and even railway crossing signals. 
+                                It was programmed using a PIC microcontroller with MPLABX which utilizes C as its programming language.
+                            </p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="project-btns">
+                    <a href="https://youtu.be/xgEXKS9g9A4?si=6Nn2NdG9RwynLDwi" target="_blank">
+                        <button>Demo</button>
+                    </a>
                 </div>
             </div>
 
@@ -512,18 +579,10 @@
         // Display the contents
         document.getElementById(tabname).classList.add("active-tab");
 
-        // If its the education tab change the photo
-        if (tabname === 'education-tab') {
-            const currSrc = photo.src
-            photo.src = photo.dataset.alt
-            photo.dataset.alt = currSrc
-        }
-
-        else {
-            const currSrc = photo.src
-            photo.src = photo.dataset.alt
-            photo.dataset.alt = currSrc
-        }
+        // Swap the photo's src and dataset.alt
+        // const currSrc = photo.src;
+        // photo.src = photo.dataset.alt;
+        // photo.dataset.alt = currSrc;
 
     } // end of opentab function
 
