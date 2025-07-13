@@ -34,15 +34,15 @@ body {
     --secondary-accent: #fc5b5b;
     --text-color: white;
     --secondary-text: rgb(196, 196, 196);
-    --mode-img-size: 4vh;
+    --mode-img-size: 5vh;
 }
 
 /* LIGHT/DARK MODE BUTTON */
 
 #mode-switch {
     cursor: pointer;
-    height: 50px;
-    width: 50px;
+    height: 3%;
+    width: 3%;
     padding: 0;
     border-radius: 50%;
     background-color: var(--secondary-color);
@@ -104,23 +104,23 @@ nav {
 }
 
 .container {
-    padding: 10px 10%;
+    padding: 2% 10%;
 }
 
 #logo {
-    width: 140px;
+    width: 15vh;
 }
 
 nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 2vh
 }
 
 nav ul li a {
     color: var(--text-color);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 2vh;
     font-weight: 600;
     position: relative;
 }
@@ -141,13 +141,13 @@ nav ul li a:hover::after {
 }
 
 .header-text {
-    margin-top: 20%;
-    font-size: 30px;
+    margin-top: 15%;
+    font-size: 3vh;
 }
 
 .header-text h1 {
-    font-size: 60px;
-    margin-top: 20px;
+    font-size: 7vh;
+    margin-top: 3vh;
 }
 
 .header-text h1 span {
